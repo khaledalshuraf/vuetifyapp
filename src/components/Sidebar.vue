@@ -31,7 +31,7 @@ export default {
   data() {
     return {
       links: [
-        ["mdi-microsoft windows ", "Dashboard"],
+        ["mdi-microsoft windows ", "activation"],
         ["mdi-account", "Profile"],
         ["mdi-clipboard-list-outline", "Product"],
         ["mdi-clipboard-list", "Order"],

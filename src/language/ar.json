@@ -1,3 +1,24 @@
 {
-
+    "Home": "الرئيسية",
+    "AboutUs": "حول",
+    "About": "حول",
+    "Services": "الخدمات",
+    "TermsOfService": "شروط الاستخدام",
+    "PrivacyPolicy": "سياسية الخصوصية",
+    "Portfolio": "المشاريع",
+    "UsefulLinks": "تصفح",
+    "OurServices": "خدماتنا",
+    "OurSocialNetworks": "روابط التواصل الاجتماعي",
+    "Copyright": "حقوق النشر",
+    "AllRightsReserved": "جميع الحقوق محفوظة",
+    "Phone": "جوال",
+    "Email": "بريد إلكتروني",
+    "JoinOurNewsletter": "اشترك في حملتنا الإخبارية",
+    "arTranslate": "En",
+    "enTranslate": "Ar",
+    "Subscribe": "اشترك",
+    "All": "الكل",
+    "EnterEmail": "أدخل بريدك الإلكتروني",
+    "SendSuccessfully": "تم الاشتراك بنجاح",
+    "Subscribtion": "اشتراك"
 }
