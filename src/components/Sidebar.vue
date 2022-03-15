@@ -5,7 +5,7 @@
         <v-avatar class="mb-4" color="grey darken-1" size="64">
           <v-img aspect-ratio="30" src="../assets/download.jpg"></v-img>
         </v-avatar>
-        <h2 class="white--text">vuetify Admin Panel</h2>
+        <h2 class="white--text">{{ $t(title) }}</h2>
       </div>
     </v-img>
 
@@ -18,7 +18,7 @@
         </v-list-item-icon>
 
         <v-list-item-content>
-          <v-list-item-title>{{ text }}</v-list-item-title>
+          <v-list-item-title>{{ $t(text) }}</v-list-item-title>
         </v-list-item-content>
       </v-list-item>
     </v-list>
@@ -30,6 +30,7 @@ export default {
   name: "Sidebar",
   data() {
     return {
+      title: "vuetify Admin Panel",
       links: [
         ["mdi-microsoft windows ", "activation"],
         ["mdi-account", "Profile"],
@@ -39,7 +40,7 @@ export default {
       ],
     };
   },
-  props:['drawer']
+  props: ["drawer"],
 };
 </script>
 

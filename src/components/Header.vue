@@ -39,7 +39,7 @@
                 <img src="../assets/download.jpg" alt="" />
               </v-avatar>
             </v-badge>
-            <span>Sharli Chin</span>
+            <span>{{$t(Sharli )}}</span>
           </v-chip>
         </span>
       </template>
@@ -72,6 +72,7 @@ export default {
 
   data() {
     return {
+      Sharli :"Sharli Chin",
       lang: localStorage.getItem("lang") || "en",
       menus: [
         { title: "Profile", icon: "mdi-account" },

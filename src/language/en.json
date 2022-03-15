@@ -1,24 +1,16 @@
 {
-    "Home": "Home",
-    "AboutUs": "About us",
-    "About": "About",
-    "Services": "Services",
-    "TermsOfService": "Terms of service",
-    "PrivacyPolicy": "Privacy policy",
-    "UsefulLinks": "Useful Links",
-    "OurServices": "Our Services",
-    "OurSocialNetworks": "Our Social Networks",
-    "Copyright": "Copyright",
-    "AllRightsReserved": "All Rights Reserved",
-    "Phone": "Phone",
-    "Email": "Email",
-    "JoinOurNewsletter": "Join Our News letter",
+
     "arTranslate": "En",
     "enTranslate": "Ar",
-    "Subscribe": "Subscribe",
-    "All": "All",
-    "EnterEmail": "Enter email",
-    "SendSuccessfully": "Send successfully",
-    "Subscribtion": "Subscribtion",
-    "Portfolio": "Portfolio"
+    "activation":"activation",
+    "Profile":"Profile",
+    "Product":"Product",
+    "Order":"Order",
+    "System Setting":"System Setting",
+    "vuetify Admin Panel": "vuetify Admin Panel",
+    "Sharli Chin":"Sharli Chin"
+
+
+
+   
 }
