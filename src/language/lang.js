@@ -5,7 +5,7 @@ import en from "./en.json";
 
 Vue.use(VueI18n);
 
-let lang = localStorage.getItem("lang") || "en"; 
+let lang = localStorage.getItem("lang") || "ar"; 
 
 let messages = {
   ar,

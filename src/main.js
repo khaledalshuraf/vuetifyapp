@@ -19,7 +19,7 @@ new Vue({
 
 
 let token = null;
-let lang= localStorage.getItem('lang') || 'en';
+let lang= localStorage.getItem('lang') || 'ar';
 window.axios.defaults.headers.common = { 'Authorization': `Bearer ${token}`, 'lang': lang};
 
 import i18n from '@/language/lang'
