@@ -16,6 +16,15 @@
       </v-form>
     </v-col>
     <v-spacer />
+
+    <a
+      class="nav-link cursorPointer"
+      style="color: #ffd585"
+      @click="changeLanguage"
+    >
+      <li>{{ $t(lang + "Translate") }}</li>
+    </a>
+
     <v-menu offset-y>
       <template v-slot:activator="{ on, attrs }">
         <span
@@ -44,12 +53,12 @@
             <v-list-subtitle> Logged In </v-list-subtitle>
           </v-list-item-content>
         </v-list-item>
-        <v-list-item v-for="(menu,index) in menus" :key="index" link>
+        <v-list-item v-for="(menu, index) in menus" :key="index" link>
           <v-list-item-icon>
-            <v-icon>{{menu.icon}}</v-icon>
+            <v-icon>{{ menu.icon }}</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title>{{menu.title}}</v-list-item-title>
+            <v-list-item-title>{{ menu.title }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -63,6 +72,7 @@ export default {
 
   data() {
     return {
+      lang: localStorage.getItem("lang") || "en",
       menus: [
         { title: "Profile", icon: "mdi-account" },
         { title: "Change Password", icon: "mdi-key" },
@@ -105,6 +115,13 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    changeLanguage() {
+      if (this.lang == "en") localStorage.setItem("lang", "ar");
+      else localStorage.setItem("lang", "en");
+      window.location.reload();
+    },
   },
 };
 </script>

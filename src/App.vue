@@ -2,11 +2,6 @@
   <v-app id="inspire">
     <Header @HeaderDrawer="drawer=!drawer"/>
     <Sidebar :drawer="drawer"/>
-
-
-
-
-
     <v-main>
       <v-container
        class="py-8 px-6"
