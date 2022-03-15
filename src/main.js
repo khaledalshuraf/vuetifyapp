@@ -4,6 +4,16 @@ import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify'
 import VueI18n from 'vue-i18n'
+import axios from 'axios';
+
+
+window.axios = axios.create({
+  baseURL: "http://admin.magnatechno.com",
+});
+
+
+
+
 
 
 
@@ -19,8 +29,10 @@ new Vue({
 
 
 let token = null;
-let lang= localStorage.getItem('lang') || 'ar';
+let lang= localStorage.getItem('lang') || 'en';
+console.log(window.axios);
 window.axios.defaults.headers.common = { 'Authorization': `Bearer ${token}`, 'lang': lang};
+
 
 import i18n from '@/language/lang'
 
