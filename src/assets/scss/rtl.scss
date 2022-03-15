@@ -1,3 +1,80 @@
 body {
-    direction: rtl;
-  }
+  direction: rtl;
+}
+.v-application .mt-4 {
+  margin-top: 16px !important;
+  position: relative;
+  right: -212px;
+}
+nav {
+  position: fixed;
+  right: 0;
+}
+
+.v-application .py-8 {
+  padding-top: 32px !important;
+  position: relative;
+  padding-bottom: 32px !important;
+  right: 265px;
+}
+
+.v-toolbar__content,
+.v-toolbar__extension {
+  align-items: center;
+  display: flex;
+  position: relative;
+  right: 256px;
+  z-index: 1;
+}
+.v-toolbar__content,
+.v-toolbar__extension {
+  align-items: center;
+  display: flex;
+  width: 85%;
+  position: relative;
+  right: 256px;
+  z-index: 1;
+}
+.v-toolbar__content{
+  width: 100%;
+}
+
+
+
+
+/*
+مسكر header.v-sheet {
+  height: 64px;
+  margin-top: 0px;
+  transform: translateY(0px);
+  left: 0px;
+  right: 0px;
+}
+nav.v-navigation-drawer {
+  height: 100vh;
+  top: 0px;
+  max-height: calc(100% - 0px);
+  transform: translateX(-100%);
+  width: 256px;
+}
+.v-main {
+  padding: 64px 0px 0px;
+
+}
+مفتوح header.v-sheet {
+  height: 64px;
+  margin-top: 0px;
+  transform: translateY(0px);
+  left: 256px;
+  right: 0px;
+}
+nav.v-navigation-drawer {
+  height: 100vh;
+  top: 0px;
+  max-height: calc(100% - 0px);
+  transform: translateX(0%);
+  width: 256px;
+}
+.v-main {
+ padding: 64px 0px 0px 256px;
+}*/
