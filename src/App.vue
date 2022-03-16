@@ -1,12 +1,9 @@
 <template>
   <v-app id="inspire">
-    <Header @HeaderDrawer="drawer=!drawer"/>
-    <Sidebar :drawer="drawer"/>
+    <Header @HeaderDrawer="drawer = !drawer" />
+    <Sidebar :drawer="drawer" />
     <v-main>
-      <v-container
-       class="py-8 px-6"
-        fluid
-      >
+      <v-container class="py-8 px-6" fluid>
         <router-view></router-view>
       </v-container>
     </v-main>
@@ -14,8 +11,8 @@
 </template>
 
 <script>
-import Sidebar from './components/Sidebar.vue';
-import Header from './components/Header.vue';
+import Sidebar from "./components/Sidebar.vue";
+import Header from "./components/Header.vue";
 
 export default {
   name: "App",
@@ -23,11 +20,13 @@ export default {
   data: () => ({
     cards: ["Today", "Yesterday"],
     drawer: true,
-
   }),
-  components:{
-    Header , 
-    Sidebar
-  }
+  components: {
+    Header,
+    Sidebar,
+  },
+  methods:{ 
+    //  router.push(`/user/${username}`)
+}
 };
 </script>

@@ -39,7 +39,7 @@
                 <img src="../assets/download.jpg" alt="" />
               </v-avatar>
             </v-badge>
-            <span>{{$t(Sharli )}}</span>
+            <span>{{ $t(Sharli) }}</span>
           </v-chip>
         </span>
       </template>
@@ -72,7 +72,7 @@ export default {
 
   data() {
     return {
-      Sharli :"Sharli Chin",
+      Sharli: "Sharli Chin",
       lang: localStorage.getItem("lang") || "en",
       menus: [
         { title: "Profile", icon: "mdi-account" },
@@ -119,8 +119,13 @@ export default {
   },
   methods: {
     changeLanguage() {
-      if (this.lang == "en") localStorage.setItem("lang", "ar");
-      else localStorage.setItem("lang", "en");
+      if (this.lang == "en") {
+        localStorage.setItem("lang", "ar");
+        this.$vuetify.rtl = true;
+      } else {
+        localStorage.setItem("lang", "en");
+        this.$vuetify.rtl = false;
+      }
       window.location.reload();
     },
   },

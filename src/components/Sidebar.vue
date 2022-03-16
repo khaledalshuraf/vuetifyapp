@@ -12,13 +12,26 @@
     <v-divider></v-divider>
 
     <v-list>
-      <v-list-item v-for="[icon, text] in links" :key="icon" link>
+      <v-list-item
+        v-for="[icon, text] in links"
+        :key="icon"
+        link
+        @click="goTo(text)"
+      >
         <v-list-item-icon>
           <v-icon>{{ icon }}</v-icon>
         </v-list-item-icon>
 
         <v-list-item-content>
-          <v-list-item-title>{{ $t(text) }}</v-list-item-title>
+          <v-list-item-title>
+            <ul>
+              <template>
+                <li>
+                  <a class="cursorPointer list-unstyled"> {{ $t(text) }}</a>
+                </li>
+              </template>
+            </ul>
+          </v-list-item-title>
         </v-list-item-content>
       </v-list-item>
     </v-list>
@@ -32,15 +45,20 @@ export default {
     return {
       title: "vuetify Admin Panel",
       links: [
-        ["mdi-microsoft windows ", "activation"],
+        ["mdi-microsoft windows ", "Activation"],
         ["mdi-account", "Profile"],
         ["mdi-clipboard-list-outline", "Product"],
         ["mdi-clipboard-list", "Order"],
-        ["mdi-cog-outline", "System Setting"],
+        ["mdi-cog-outline", "SystemSetting"],
       ],
     };
   },
   props: ["drawer"],
+  methods: {
+    goTo(text) {
+      this.$router.push({ name: text });
+    },
+  },
 };
 </script>
 

@@ -1,80 +1,82 @@
 <template>
-  <div class="deshboard">
-    <v-subheader class="d-flex justify-space-between align-center">
-      <h3>Deshboard</h3>
-      <v-btn color="success" class="rounded-lg"> View Orders </v-btn>
-    </v-subheader>
-    <br />
-    <v-row>
-      <v-col lg="7" cols="12">
-        <v-alert dense text type="success">
-          Login Successfully! Welcome to <strong>web Burden</strong>
-        </v-alert>
-        <v-row>
-          <v-col
-            lg="6"
-            cols="12"
-            v-for="(item, index) in activities"
-            :key="index"
+  <div>
+    <div class="deshboard">
+      <v-subheader class="d-flex justify-space-between align-center">
+        <h3>Deshboard</h3>
+        <v-btn color="success" class="rounded-lg"> View Orders </v-btn>
+      </v-subheader>
+      <br />
+      <v-row>
+        <v-col lg="7" cols="12">
+          <v-alert dense text type="success">
+            Login Successfully! Welcome to <strong>web Burden</strong>
+          </v-alert>
+          <v-row>
+            <v-col
+              lg="6"
+              cols="12"
+              v-for="(item, index) in activities"
+              :key="index"
+            >
+              <v-card elevation="2" class="rounded-lg">
+                <v-card-text class="d-flex justify-space-between align-center">
+                  <div class="">
+                    <strong>{{ item.title }}</strong
+                    ><br />
+                    <small>Last 2 weeks</small>
+                  </div>
+                  <v-avatar :color="item.color" size="60">
+                    <span class="white--text">{{ item.amouts }}</span>
+                  </v-avatar>
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-col>
+        <v-col lg="5" cols="12">
+          <v-card>
+            <v-card-title>activities</v-card-title>
+            <v-timeline align-top dense>
+              <v-timeline-item color="pink" small>
+                <strong>50 minuts ago</strong>
+                <div class="text-caption">Mobile App</div>
+              </v-timeline-item>
+
+              <v-timeline-item color="green" small
+                ><strong>10 minuts ago</strong>
+                <div class="text-caption">Mobile App</div>
+              </v-timeline-item>
+
+              <v-timeline-item color="teal lighten-3" small
+                ><strong>New Icon</strong>
+                <div class="text-caption">Mobile App</div>
+              </v-timeline-item>
+            </v-timeline>
+          </v-card>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col lg="12">
+          <v-data-table
+            caption="Recent Orders"
+            :headers="headers"
+            :items="desserts"
+            :items-per-page="5"
+            class="elevation-1"
           >
-            <v-card elevation="2" class="rounded-lg">
-              <v-card-text class="d-flex justify-space-between align-center">
-                <div class="">
-                  <strong>{{ item.title }}</strong
-                  ><br />
-                  <small>Last 2 weeks</small>
-                </div>
-                <v-avatar :color="item.color" size="60">
-                  <span class="white--text">{{ item.amouts }}</span>
-                </v-avatar>
-              </v-card-text>
-            </v-card>
-          </v-col>
-        </v-row>
-      </v-col>
-      <v-col lg="5" cols="12">
-        <v-card>
-          <v-card-title>activities</v-card-title>
-          <v-timeline align-top dense>
-            <v-timeline-item color="pink" small>
-              <strong>50 minuts ago</strong>
-              <div class="text-caption">Mobile App</div>
-            </v-timeline-item>
-
-            <v-timeline-item color="green" small
-              ><strong>10 minuts ago</strong>
-              <div class="text-caption">Mobile App</div>
-            </v-timeline-item>
-
-            <v-timeline-item color="teal lighten-3" small
-              ><strong>New Icon</strong>
-              <div class="text-caption">Mobile App</div>
-            </v-timeline-item>
-          </v-timeline>
-        </v-card>
-      </v-col>
-    </v-row>
-    <v-row>
-      <v-col lg="12">
-        <v-data-table
-          caption="Recent Orders"
-          :headers="headers"
-          :items="desserts"
-          :items-per-page="5"
-          class="elevation-1"
-        >
-          <template v-slot:item.action>
-            <v-btn color="success">View</v-btn>
-          </template>
-        </v-data-table>
-      </v-col>
-    </v-row>
+            <template v-slot:item.action>
+              <v-btn color="success">View</v-btn>
+            </template>
+          </v-data-table>
+        </v-col>
+      </v-row>
+    </div>
   </div>
 </template>
-
 <script>
+
 export default {
-  name: "Deshboard",
+  name: "Activation",
   data() {
     return {
       activities: [
@@ -181,6 +183,7 @@ export default {
       ],
     };
   },
+
 };
 </script>
 
